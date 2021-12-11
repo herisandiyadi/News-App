@@ -2,7 +2,7 @@
 
 Project News APP - Dicoding
 
-With dummy data Json
+With dummy data Json, webview
 
 ## Screenshot APP
 
