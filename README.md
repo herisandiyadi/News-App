@@ -1,4 +1,4 @@
-# newsapp
+# News App
 
 Project News APP - Dicoding
 
