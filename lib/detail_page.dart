@@ -12,6 +12,7 @@ class ArticleDetailPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(article.title),
+        centerTitle: true,
       ),
       body: Column(
         children: [
@@ -51,7 +52,10 @@ class ArticleDetailPage extends StatelessWidget {
                   height: 10,
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/article-webview',
+                        arguments: article.url);
+                  },
                   child: Text('Read more'),
                 ),
               ],

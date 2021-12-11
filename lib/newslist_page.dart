@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:newsapp/article.dart';
-import 'package:newsapp/detail_page.dart';
 
 class NewsListPage extends StatelessWidget {
   // static const routeName = '/articlelist';
