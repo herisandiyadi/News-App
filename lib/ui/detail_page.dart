@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:newsapp/article.dart';
+import 'package:newsapp/data/model/article.dart';
 
 class ArticleDetailPage extends StatelessWidget {
   // static const routeName = '/article_detail';
@@ -16,12 +16,12 @@ class ArticleDetailPage extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Image.network(article.urlToImage),
+          Image.network(article.urlToImage!),
           Padding(
             padding: EdgeInsets.all(10),
             child: Column(
               children: [
-                Text(article.description),
+                Text(article.description!),
                 Divider(
                   color: Colors.grey,
                 ),
@@ -45,7 +45,7 @@ class ArticleDetailPage extends StatelessWidget {
                   color: Colors.grey,
                 ),
                 Text(
-                  article.content,
+                  article.content!,
                   style: TextStyle(fontSize: 16),
                 ),
                 SizedBox(

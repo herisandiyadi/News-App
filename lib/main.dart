@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:newsapp/article.dart';
-import 'package:newsapp/article_webview_page.dart';
-import 'package:newsapp/detail_page.dart';
-import 'package:newsapp/newslist_page.dart';
-import 'package:newsapp/style.dart';
+import 'package:newsapp/data/model/article.dart';
+import 'package:newsapp/ui/article_webview_page.dart';
+import 'package:newsapp/common/style.dart';
+import 'package:newsapp/ui/detail_page.dart';
+import 'package:newsapp/ui/home_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -23,6 +23,10 @@ class MyApp extends StatelessWidget {
               onPrimary: Colors.black,
               secondary: secondaryColor,
             ),
+        bottomNavigationBarTheme: BottomNavigationBarThemeData(
+          selectedItemColor: secondaryColor,
+          unselectedItemColor: Colors.grey,
+        ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             primary: secondaryColor,
@@ -39,7 +43,7 @@ class MyApp extends StatelessWidget {
         appBarTheme: AppBarTheme(elevation: 0),
       ),
       routes: {
-        '/': (context) => NewsListPage(),
+        '/': (context) => HomePage(),
         '/detail-page': (context) => ArticleDetailPage(
             article: ModalRoute.of(context)?.settings.arguments as Article),
         '/article-webview': (context) => ArticleWebView(
